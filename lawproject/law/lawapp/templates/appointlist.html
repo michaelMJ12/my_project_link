@@ -1,0 +1,57 @@
+{% extends "home.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div>
+     <div>
+          <div>
+               <div>
+                    <div>
+                         <div>
+                              <div class="m-5">
+                                   <h1 align='center'><b>APPOINTMENT APP</b></h1>
+                              </div>
+                              <div class="btn btn-primary btn-sm mb-2 mx-2 b-block">
+                                   <a href="{% url 'home' %}" style="color:white; text-decoration:none;">Back</a>
+                              </div>
+                              <table class="table table-striped">
+                                   <thead class="table-warning">
+                                        <tr>
+                                            <td>S/N</td>
+                                            <td>NAMES</td>
+                                            <td>PHONE_NUMBER</td>
+                                            <td>EMAILL</td>
+                                            <td>ADDRESS</td>
+                                            <td>MESSAGE</td>
+                                            <td>ACTION_OF_MESSAGE</td>
+                                        </tr>
+                                   </thead>
+                                   <tbody>
+                                        {% for appointmentlist in appointmentlists %}
+                                        <tr>
+                                           <td>{{forloop.counter}}</td>
+                                           <td>{{appointmentlist.name}}</td>
+                                           <td>{{appointmentlist.phone_number}}</td>
+                                           <td>{{appointmentlist.email}} </td> 
+                                           <td>{{appointmentlist.address}}</td>
+                                           <td>{{appointmentlist.messages}}</td>
+                                           <td>
+                                               <a href="{% url 'appointdelete' appointmentlist.id %}" class="btn btn-primary btn-sm">DELETE</a>
+                                               <a href="{% url 'appointview' appointmentlist.id %}" class="btn btn-danger btn-sm" >VIEW</a>
+                                               <!-- <a href="" class="btn btn-success btn-sm" >UPDATE</a> -->
+                                           </td>
+                                        </tr> 
+                                        {% endfor %}
+                                   </tbody>
+                              </table>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,98 @@
+
+body {
+      background-color: #999; 
+}
+.header {
+     margin: 20px;
+     color: #000;
+     text-align: center;
+}
+#container {
+     width: 70%;
+     margin: 30px auto;
+     padding: 20px;
+     border: 2px solid gray;
+ }
+ .content label {
+     display: inline-block;
+     width: 15%;
+     font-weight: bold;
+     text-transform: capitalize;
+ }
+ .content {
+     padding: 10px 0;
+ }
+ .content input, .content select {
+     width: 80%;
+     height: 30px;
+     outline: none;
+ }
+ #button-container {
+     /* position: relative; */
+     width: 80%;
+     height: 80px;
+     margin-top: 20px ;
+     margin-bottom: 20px;
+     margin-left: 15%;
+     display: flex;
+     justify-content: space-between;
+     /* border: 1px solid black; */
+ }
+ button, #btn {
+     width: 200px;
+     height: 40px;
+     text-align: center;
+     background: #32ad84;
+     color: #fff;
+     font-size: 20px;
+ }
+ #btn {
+     /* position: absolute; */
+     /* right: 50px; */
+ }
+
+ 
+
+.title {
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+    position: relative;
+
+}
+
+.content {
+    background-color: #fff;
+    padding: 30px;
+
+}
+
+#image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+img {
+    width:150px ;
+    border: 2px solid gray;
+    padding: 5px;
+}
+
+.title button {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.mike{
+    display : block;
+    margin: 40px auto;
+   display:flex; 
+   
+}
+
+.default_image{
+    height:50px;
+     width : 50px;
+}

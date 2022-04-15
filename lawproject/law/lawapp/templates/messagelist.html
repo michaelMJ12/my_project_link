@@ -1,0 +1,57 @@
+{% extends "home.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div>
+     <div>
+          <div>
+               <div>
+                    <div>
+                         <div>
+                              <div class="m-5">
+                                   <h1 align='center'><b>MESSAGE APP</b></h1>
+                              </div>
+                              <div class="btn btn-primary btn-sm mb-2 mx-2 b-block">
+                                   <a href="{% url 'home' %}" style="color:white; text-decoration:none;">Back</a>
+                              </div>
+                              <table class="table table-striped">
+                                   <thead class="table-warning">
+                                        <tr>
+                                            <td>S/N</td>
+                                            <td>NAMES</td>
+                                            <td>PHONE_NUMBER</td>
+                                            <td>EMAILL</td>
+                                            <!-- <td>ADDRESS</td> -->
+                                            <td>MESSAGE</td>
+                                            <td>ACTION_OF_MESSAGE</td>
+                                        </tr>
+                                   </thead>
+                                   <tbody>
+                                        {% for messagelist in messagelists %}
+                                        <tr>
+                                           <td>{{forloop.counter}}</td>
+                                           <td>{{messagelist.nameM}}</td>
+                                           <td>{{messagelist.phone_numberM}}</td>
+                                           <td>{{messagelist.emailM}} </td> 
+                                           <!-- <td>{{appointmentlist.address}}</td> -->
+                                           <td>{{messagelist.messagesM}}</td>
+                                           <td>
+                                               <a href="{% url 'messagedelete' messagelist.id %}" class="btn btn-primary btn-sm">DELETE</a>
+                                               <!-- <a href="" class="btn btn-danger btn-sm" >VIEW</a> -->
+                                               <!-- <a href="" class="btn btn-success btn-sm" >UPDATE</a> -->
+                                           </td>
+                                        </tr> 
+                                        {% endfor %}
+                                   </tbody>
+                              </table>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/custom.css'%}">
+
+     <script src="{%static 'js/bootstrap.min.js'%}"></script>
+     <script src="{%static 'jquery/jquery.js'%}"></script>
+
+     
+
+
+
+
+
+ </head>
+<body>
+<div class="container">    
+     <div class="mt-5 title">
+          <div  style="background-color: black;">
+          <h1 align="center" style="color: whitesmoke ;">Registration Form</h1>
+          </div>
+          <div class="p-5" style="background-color:  rgb(92, 72, 72);">
+          <form action="register" method="POST" enctype="">
+                   {% csrf_token %}
+                    {{form.as_p}}
+                 
+             <!-- <div> -->
+                    <!-- {% for message in messages %} -->
+                         <!-- <h5>{{ message }}</h5> -->
+                    <!-- {% endfor %} -->
+               <!-- </div> -->
+                    <!-- <input type="text" placeholder="Enter Firstname" name="firstname" class="form-control" autocomplete="off"><br> -->
+                    <!-- <input type="text" placeholder="Enter Lasstname" name="lastname" class="form-control" autocomplete="off"><br> -->
+                    <!-- <input type="text" placeholder="Enter Username" name="username" class="form-control" autocomplete="off"><br> -->
+                    <!-- <input type="email" placeholder="Enter Email" name="email" class="form-control" autocomplete="off"><br> -->
+                    <!-- <input type="password" placeholder="Enter Password" name="password1" class="form-control"><br>                -->
+                    <!-- <input type="password" placeholder="Enter Confirm Password" name="password2" class="form-control"><br> -->
+                    
+                    <input type="submit" class="btn btn-primary" value="Sign in">
+                    already registered login <a href="login">login</a>
+               
+          </form>
+          </div>
+     </div> 
+</div>  
+     
+
+</body>
+</html>

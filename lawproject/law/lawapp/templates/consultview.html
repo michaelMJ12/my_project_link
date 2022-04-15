@@ -1,0 +1,73 @@
+{% extends "home.html" %}
+
+{% load static %}
+
+ {% block content %} 
+
+<div class="container">
+     <div class="mt-5 title" style="background-color: black; height: 100px;">
+       <a href="{% url 'consultlist' %}"><button class="btn btn-outline-warning">Back</button></a>
+       <h1 style="color: rgb(221, 220, 220);" align="center">Consultant details</h1>
+     </div>
+     <div class="content">
+               <div id="image">
+               <img src="" alt="">
+               </div>
+          <div class="row">
+               <div class="col" style="color: red;">
+               <label for="">NAME :</label>
+               </div>
+               <div class="col">
+                <p>{{consultantview.nameC}}</p> 
+               </div>
+          </div>
+          <div class="row">
+               <div class="col" style="color:red;">
+                  <label for="">PHONE_NUMBER:</label>
+               </div>
+               <div class="col">
+                    <p>{{consultantview.phone_numberC}}</p>
+               </div>
+          </div>
+          <div class="row">
+               <div class="col" style="color: red;">
+                  <label for="">EMAILL :</label>
+               </div>
+               <div class="col">
+                    <p>{{consultantview.emailC}}</p>
+               </div>
+          </div>
+          <div class="row">
+               <div class="col" style="color: red;">
+                  <label for=""> ADDRESS :</label>
+               </div>
+               <div class="col">
+                    <p>{{consultantview.addressC}}</p>
+               </div>
+          </div>
+          <div class="row">
+               <div class="col" style="color: red;">
+                    <label for="">MESSAGE :</label>
+               </div>
+               <div class="col">
+                    <p>{{consultantview.messagesC}}</p>
+               </div>
+          </div>
+          <div class="row">
+               <div class="col" style="color: red;">
+                    <!-- <label for="">DESCRIPT:</label> -->
+               </div>
+               <div class="col">
+                    <!-- <p>{{product.description}}</p> -->
+               </div>
+          </div>
+          <div align="center">
+               <!-- <a href="" class="btn btn-primary">details</a> -->
+          </div>
+     </div>
+</div>
+
+     
+
+
+{% endblock %}
